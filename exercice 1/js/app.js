@@ -37,5 +37,37 @@ var erp = document.getElementsByTagName("pre")[0];
 erp.style.color= "white";
 erp.style.backgroundColor= "blue";
 erp.style.borderTop ="3px solid red";
-erp.style.borderTop ="3px solid red";
+erp.style.borderBottom ="3px solid red";
 console.log(erp);
+
+var titre1 = document.querySelector("h3");
+titre1.innerHTML="<em>Itelic title ! yeah !</em>";
+
+var titre2 = document.querySelector("h2");
+titre2.innerHTML="<strong>HTML doens't work !</strong>";
+
+// Exo 4
+
+var exo4 = document.querySelector("ul");
+exo4.innerHTML += '<li>Mon meilleur ami est <a href="http://www.google.com" id="lien">Google</a></li>' ;
+
+var exo4style = document.getElementById("lien");
+exo4style.style.color="white";
+console.log(exo4style);
+
+// Exercice 5
+
+var liste = document.querySelector("ol");
+var childList = liste.childNodes;
+while (liste.firstChild) { // Tant qu'il y a un premier enfant il l'enlève ça efface tout les enfants
+  liste.removeChild(liste.firstChild);
+}
+
+var array =["Silent Teacher","Code Monkey", "CodeCombat"];
+for(l=0 ; l<array.length ; l++){
+     const create = document.createElement("li");
+     const NewLi = document.createTextNode(array[l]);
+     create.appendChild(NewLi);
+     document.querySelector("ol").appendChild(create);
+
+}
